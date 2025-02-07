@@ -2,8 +2,8 @@ package com.connect4.model;
 
 public enum Cell {
     EMPTY(" "),
-    RED("R"),
-    YELLOW("Y");
+    RED("P"),
+    YELLOW("S");
 
     private final String symbol;
 
@@ -27,8 +27,8 @@ public enum Cell {
 
     public static Cell fromSymbol(String symbol) {
         return switch (symbol.toUpperCase()) {
-            case "R" -> RED;
-            case "Y" -> YELLOW;
+            case "P" -> RED;
+            case "S" -> YELLOW;
             default -> EMPTY;
         };
     }
